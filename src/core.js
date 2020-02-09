@@ -113,6 +113,11 @@ IScroll.prototype = {
   },
 
   _start: function (e) {
+		// Ignore multitouch
+		if (!e.isPrimary) {
+			return;
+		}
+
     // React to left mouse button only
     if ( utils.eventType[e.type] != 1 ) {
       // for button property
@@ -174,6 +179,11 @@ IScroll.prototype = {
   },
 
   _move: function (e) {
+		// Ignore multitouch
+		if (!e.isPrimary) {
+			return;
+		}
+
     if ( !this.enabled || utils.eventType[e.type] !== this.initiated ) {
       return;
     }
@@ -271,6 +281,11 @@ IScroll.prototype = {
   },
 
   _end: function (e) {
+		// Ignore multitouch
+		if (!e.isPrimary) {
+			return;
+		}
+
     if ( !this.enabled || utils.eventType[e.type] !== this.initiated ) {
       return;
     }
