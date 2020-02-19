@@ -1,4 +1,4 @@
-/*! iScroll v5.2.1 ~ (c) 2008-2020 Matteo Spinelli ~ http://cubiq.org/license */
+/*! iScroll v5.2.4 ~ (c) 2008-2020 Matteo Spinelli ~ http://cubiq.org/license */
 (function (window, document, Math) {
 var rAF = window.requestAnimationFrame  ||
   window.webkitRequestAnimationFrame  ||
@@ -411,7 +411,7 @@ function IScroll (el, options) {
 }
 
 IScroll.prototype = {
-  version: '5.2.1',
+  version: '5.2.4',
 
   _init: function () {
     this._initEvents();
@@ -457,7 +457,7 @@ IScroll.prototype = {
 
   _start: function (e) {
 		// Ignore multitouch
-		if (!e.isPrimary) {
+		if (e.pointerType == "touch" && !e.isPrimary) {
 			return;
 		}
 
@@ -523,7 +523,7 @@ IScroll.prototype = {
 
   _move: function (e) {
 		// Ignore multitouch
-		if (!e.isPrimary) {
+		if (e.pointerType == "touch" && !e.isPrimary) {
 			return;
 		}
 
@@ -625,7 +625,7 @@ IScroll.prototype = {
 
   _end: function (e) {
 		// Ignore multitouch
-		if (!e.isPrimary) {
+		if (e.pointerType == "touch" && !e.isPrimary) {
 			return;
 		}
 
