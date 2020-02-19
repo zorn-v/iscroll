@@ -18,6 +18,9 @@
     "jshint": "~2.9.1",
     "uglify-js": "~2.6.2"
   },
+  "scripts": {
+    "version": "./build.js"
+  },
   "repository": {
     "type": "git",
     "url": "https://github.com/zorn-v/iscroll.git"

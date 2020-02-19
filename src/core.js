@@ -114,7 +114,7 @@ IScroll.prototype = {
 
   _start: function (e) {
 		// Ignore multitouch
-		if (!e.isPrimary) {
+		if (e.pointerType == "touch" && !e.isPrimary) {
 			return;
 		}
 
@@ -180,7 +180,7 @@ IScroll.prototype = {
 
   _move: function (e) {
 		// Ignore multitouch
-		if (!e.isPrimary) {
+		if (e.pointerType == "touch" && !e.isPrimary) {
 			return;
 		}
 
@@ -282,7 +282,7 @@ IScroll.prototype = {
 
   _end: function (e) {
 		// Ignore multitouch
-		if (!e.isPrimary) {
+		if (e.pointerType == "touch" && !e.isPrimary) {
 			return;
 		}
 
