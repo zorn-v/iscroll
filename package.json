@@ -19,7 +19,7 @@
     "uglify-js": "~2.6.2"
   },
   "scripts": {
-    "version": "./build.js"
+    "version": "./build.js && git add build"
   },
   "repository": {
     "type": "git",
